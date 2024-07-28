@@ -32,7 +32,7 @@ export const getGraphRevenue = async(storeId : string) => {
             revenueForOrder += item.product.price.toNumber();
         }
 
-        monthlyRevenue[month] = (monthlyRevenue[month]) || 0 + revenueForOrder;
+        monthlyRevenue[month] = (monthlyRevenue[month] || 0) + revenueForOrder;
     }
 
   const graphData : GraphData[] = [
